@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #f1f1f1;
+  padding: 12px 10px 20px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header header header header' 
+    'middle middle middle middle right right' 
+    ;
+   grid-column-gap: 2%; 
+      
+} 
+
+
+
+.middle,
+.right {
+  padding: 10px;
+ /* Should be removed. Only for demonstration */
+}
+
+/* Style the left column 
+.middle {
+  grid-area: left;
+}
+
+ Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+    background-color:#ccc;
+}
+
+/* Style the footer */
+/*
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+*/
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+      'header header header header header header' 
+      
+      'middle middle middle middle middle middle' 
+      'right right right right right right' 
+     ;
+  }
+    
+}
+
+.header h1{  float: left;color: #33b5e5; display: inline; font-size: 40px;padding: 0px;margin: 2px; letter-spacing: 20px; text-shadow: 0 2px #00f,2px 0px #00f; text-align: center; display: inline-block;margin-left: 25%;font-weight: 700}
+
+.header ul {display: inline-block;
+  list-style-type: none;
+  margin: 0;
+    padding: 0;
+float: right;
+    
+    
+}
+
+.header li {
+    display: inline-block;
+    border-radius: 8px;
+     padding: 5px;
+  margin-bottom: 4px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: inline;
+    width: 20%;
+    font-size: 20px;
+}
+
+
+
+.header li:hover {
+  background-color: #0099cc;
+}
+.header li a {
+    
+    text-decoration-style: none; text-decoration: none; color: #fff;
+}
+
+textarea, input[type=text], input[type=email],input[type=password],input[type=file] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+    box-sizing: border-box;}
+/*
+, input[type=image]
+{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline; 
+  box-sizing: border-box;}
+        
+*/
+    
+
+
+input[type=submit], button[type=submit],button[type=reset] {
+  width: 80%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.right_{
+    margin-bottom: 30px; background: #ffff;box-shadow: 0 3px #aaaa; border-radius: 3px;
+}
+.right_ p{ margin-left: 30px; padding-bottom: 10px;}
+.right_i {background-color: #aaa;color: #fff; text-decoration: none; padding: 2px; list-style: none;font-weight: 700}
+
+.middle form label{
+     color: #fff; border-radius: 3px; padding: 5px; font-weight: 700
+}
+.middle form div {
+    background: #bbb; margin-bottom: 20px;
+}
+.intervention{text-align: center;
+background: #0099cc;
+    color: #fff;
+}
+.redflag {
+    text-align: center;
+    background-color: #ff0000;
+    color: #fff;
+}
